@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit URL for Indexing</title>
+</head>
+<body>
+  <h1>Submit URL for Google Indexing</h1>
+  <form id="urlForm">
+    <label for="url">URL:</label>
+    <input type="text" id="url" name="url" required placeholder="Enter URL to submit">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('urlForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const url = document.getElementById('url').value;
+      if (!url) {
+        alert('Please enter a URL');
+        return;
+      }
+
+      try {
+        const response = await fetch('/submit-url', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ url }),
+        });
+
+        if (response.ok) {
+          alert('URL submitted successfully!');
+        } else {
+          alert('Error submitting URL.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error submitting URL.');
+      }
+    });
+  </script>
+</body>
+</html>
