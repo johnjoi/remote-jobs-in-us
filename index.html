@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="AZ9iREgYhf1kHw2kfRLIcg7zdA1AE8KeB09UKknTWvQ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Indexing</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            transition: background-color 0.5s ease; /* Smooth transition for background color */
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .button {
+                font-size: 14px;
+                padding: 12px 25px;
+            }
+
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>All Jobs</h1>
+        <a href="https://remotejobsinusa.github.io/jobs/job101.html" class="button">Job 101</a>
+        <a href="https://remotejobsinusa.github.io/jobs/job102.html" class="button">Job 102</a>
+        <a href="https://remotejobsinusa.github.io/jobs/job103.html" class="button">Job 103</a>
+        <a href="https://remotejobsinusa.github.io/jobs/job104.html" class="button">Job 104</a>
+        <a href="https://remotejobsinusa.github.io/jobs/job105.html" class="button">Job 105</a>
+        <a href="https://remotejobsinusa.github.io/jobs/job106.html" class="button">Job 106</a>
+        <a href="https://remotejobsinusa.github.io/jobs/job107.html" class="button">Job 107</a>
+        <a href="https://remotejobsinusa.github.io/jobs/job108.html" class="button">Job 108</a>
+    </div>
+
+    <script>
+        // Array of colors
+        const colors = ['#FF0000', '#0000FF', '#FFFF00', '#FFC0CB', '#008000'];
+
+        // Function to get a random color from the array
+        function getRandomColor() {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            return colors[randomIndex];
+        }
+
+        // Apply the random color to the background of the page
+        document.body.style.backgroundColor = getRandomColor();
+    </script>
+</body>
+</html>
